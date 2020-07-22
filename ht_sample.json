@@ -1,0 +1,23 @@
+{
+  'records': {
+    '102471822': {
+      'recordURL': 'https://catalog.hathitrust.org/Record/102471822',
+      'titles': ['The Black Hills, mid-continent resort'],
+      'isbns': [],
+      'issns': [],
+      'oclcs': ['2541162'],
+      'lccns': ['52009649'],
+      'publishDates': ['1952']
+    }
+  },
+  'items': [{
+    'orig': 'University of California',
+    'fromRecord': '102471822',
+    'htid': 'uc1.c005628823',
+    'itemURL': 'https://hdl.handle.net/2027/uc1.c005628823',
+    'rightsCode': 'ic',
+    'lastUpdate': '20181128',
+    'enumcron': False,
+    'usRightsString': 'Limited (search-only)'
+  }]
+}
