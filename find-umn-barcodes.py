@@ -23,6 +23,8 @@ def get_items(record_data):
 
 def main():
     fname = input ("Enter the spreadsheet filename: ")
+    run = input ("Which file run are you on?: ") #helps with quota issues
+    report_name = 'itemreport' + run + '.csv'
     with open(fname) as csv_file:
         reader = csv.reader(csv_file, delimiter='\t')
         header = next(reader)
@@ -38,7 +40,7 @@ def main():
                     #ht_record_id = get_record_id(record_data)
                     list_items = get_items(record_data)
                     umn_items = ' '.join([str(x) for x in list_items])
-                    with open('itemreport.csv', 'a', newline='') as outfile:
+                    with open(report_name, 'a', newline='') as outfile:
                         output = csv.writer(outfile, delimiter=',', quotechar='|', quoting=csv.QUOTE_MINIMAL)
                         if umn_items:
                             output.writerow([ocn, mms, umn_items])
