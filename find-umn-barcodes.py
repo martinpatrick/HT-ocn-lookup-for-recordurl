@@ -6,15 +6,9 @@ import csv
 import re
 from tqdm import tqdm
 
-#def get_record_id(record_data):
-#    record_data["records"].keys()
-#    for key in record_data["records"].keys():
-#        record_id = key
-#        return(record_id)
-
 def get_items(record_data):
     list_items = []
-    regexp = re.compile(r'^umn*')
+    regexp = re.compile(r'^umn*') #change this to your prefix
     for item in record_data['items']:
         htid = item.get('htid')
         if regexp.search(htid):
@@ -45,7 +39,7 @@ def main():
                         if umn_items:
                             output.writerow([ocn, mms, umn_items])
                         else:
-                            nothing = "No UMN Items"
+                            nothing = "No UMN Items" #change this to your preference
                             output.writerow([ocn, mms, nothing])
 
 if __name__ == "__main__":
